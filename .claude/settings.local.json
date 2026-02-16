@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "WebSearch",
+      "WebFetch(domain:heft.rushstack.io)",
+      "Bash(gh issue view:*)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "@benvp/heft-tailwindcss-plugin",
+  "version": "0.1.0",
+  "description": "A heft plugin for compiling Tailwind CSS.",
+  "author": "Benjamin von Polheim <ben@vp.solutions>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benvp/heft-tailwindcss-plugin.git"
+  },
+  "license": "MIT",
+  "main": "./dist/TailwindCSSPlugin.js",
+  "types": "./dist/TailwindCSSPlugin.d.ts",
+  "keywords": [
+    "heft",
+    "tailwindcss",
+    "rushstack",
+    "plugin"
+  ],
+  "homepage": "https://github.com/benvp/heft-tailwindcss-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/benvp/heft-tailwindcss-plugin/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "tailwindcss-options.schema.json",
+    "heft-plugin.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "peerDependencies": {
+    "@rushstack/heft": "^1.0.0",
+    "@tailwindcss/cli": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@tailwindcss/cli": {
+      "optional": true
+    },
+    "@tailwindcss/postcss": {
+      "optional": true
+    },
+    "postcss": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@rushstack/heft": "^1.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^25.2.3",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "jiti": "^2.6.1",
+    "postcss": "^8.0.0",
+    "prettier": "^3.5.0",
+    "typescript": "~5.8.0",
+    "typescript-eslint": "^8.56.0"
+  },
+  "packageManager": "pnpm@10.29.3+sha512.498e1fb4cca5aa06c1dcf2611e6fafc50972ffe7189998c409e90de74566444298ffe43e6cd2acdc775ba1aa7cc5e092a8b7054c811ba8c5770f84693d33d2dc"
+}

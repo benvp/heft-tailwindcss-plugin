@@ -1,0 +1,27 @@
+# Logs
+*.log
+
+# Runtime data
+*.pid
+*.pid.lock
+*.seed
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# pnpm
+.pnpm-store
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
+
+# Output of 'npm pack'
+*.tgz
+
+# Build output
+dist

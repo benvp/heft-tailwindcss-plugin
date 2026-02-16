@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Tailwind CSS Plugin options",
+  "description": "Defines configuration used by the \"tailwindcss-plugin\" Heft task event.",
+  "type": "object",
+
+  "additionalProperties": false,
+  "required": ["inFile", "outFile", "compiler"],
+
+  "properties": {
+    "inFile": {
+      "type": "string",
+      "description": "The input CSS file."
+    },
+    "outFile": {
+      "type": "string",
+      "description": "The output CSS file."
+    },
+    "compiler": {
+      "type": "string",
+      "enum": ["cli", "postcss"],
+      "description": "The compile tool to use. \"cli\" uses @tailwindcss/cli, \"postcss\" uses postcss + @tailwindcss/postcss."
+    },
+    "postcssPluginOptions": {
+      "type": "object",
+      "description": "Options passed to the @tailwindcss/postcss plugin. Only used when compiler is \"postcss\"."
+    }
+  }
+}
